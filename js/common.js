@@ -15,8 +15,11 @@ introTxt2.addEventListener('input', function() {
 
 // aside
 const topMove = document.getElementById('top-move');
+const intro = document.getElementById('intro');
 const about = document.getElementById('about');
 const header = document.getElementById('header');
+const headerContainer = document.getElementById('header-container');
+
 
 const checkScroll = () => {
 
@@ -33,11 +36,40 @@ const checkScroll = () => {
     }
 
 
-    //header - bb
-    if ( pageOffset >= intro.scrollHeight ) {
-        header.className = 'header-scroll';
+    
+    
+    //if ( pageOffset >= intro.scrollHeight ) {
+    // if ( pageOffset >= about.offsetTop ) {
+    //     // about 섹션 부터 menu all white
+    //     headerContainer.classList.remove('header-container');
+    //     headerContainer.classList.remove('header-scroll-up');
+    //     headerContainer.classList.add('header-scroll-down');
+
+    // } 
+    
+    // if ( pageOffset == intro.scrollHeight ) {
+        
+    //     headerContainer.classList.remove('header-scroll-down');
+    //     headerContainer.classList.add('header-scroll-up');
+    //     headerContainer.classList.add('header-container');
+
+    // }
+
+
+    // header menu class
+    if ( pageOffset >= 350 ) {
+        // menu 지나면 menu all white
+        headerContainer.classList.remove('header-container');
+        headerContainer.classList.remove('header-scroll-up');
+        headerContainer.classList.add('header-scroll-down');
+    
+    } else if( pageOffset <= 250 ) {
+        headerContainer.classList.remove('header-scroll-down');
+        headerContainer.classList.add('header-scroll-up');
+        //headerContainer.classList.add('header-container');
+
     } else {
-        header.classList = 'header-off';
+
     }
  
 }

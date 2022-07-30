@@ -33,8 +33,6 @@
                 elmnt = z[i];
                 file = elmnt.getAttribute("data-include");
         
-                console.log(file);
-        
     
                 if (file) {
                     xhttp = new XMLHttpRequest();
@@ -70,20 +68,12 @@
 
 </head>
 
-
-
 <body>
-
-
-    
 
     <div class='wrap'>
 
-        <div data-include="test.html">d</div>
-
-
-        <!-- <header id='header'>
-            <div class='header-container'>
+        <header id='header'>
+            <div id='header-container' class='header-container'>
                 <div class='header-sub-container'>
                     <div class='logo'>
                         <a href='#intro'>BOBO</a>
@@ -97,7 +87,7 @@
                     </ul>
                 </div>
             </div> 
-        </header> -->
+        </header>
     
         <section id='intro'>
             <div class="contents-container">
@@ -123,7 +113,7 @@
     
         <section id='project'>
             <div class='project-container'>
-
+                <div data-include='views/contents/project.html'></div>
             </div>
 
         </section>
@@ -154,6 +144,13 @@
             <a id='top-move'>top</a>
         </div>
     </aside>
+
+
+
+
+    <div data-include='test.html'></div>
+    
+
 
     <script src='js/common.js'></script>
         

@@ -47,8 +47,6 @@
     },
     
     
-    "args": ["localhost\\${workspaceRootFolderName}\\${fileBasename}"],
-
-    "Access-Control-Allow-Origin": "*"
+    "args": ["localhost\\${workspaceRootFolderName}\\${fileBasename}"]
 }
 
