@@ -1,0 +1,25 @@
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin color-font($size, $color, $weight: "normal") {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+ }
+
+ @mixin round-border($radius, $size, $color,) {
+    border-radius: $radius;
+    border: $size solid $color;
+}

@@ -1,0 +1,31 @@
+#contact {
+    width: 100%;
+    height: 100vh;
+
+    .contact-container {
+        height: 100vh;
+        width:1220px;
+        @include center;
+        @include column;
+        align-content: center;
+        padding:100px 50px 100px;
+        margin:0 auto;
+
+        .contact-tit {
+            @include color-font(26pt, $green, 800);
+            padding-bottom:30px;
+        }
+
+        dl {
+            padding: 25px 0;
+        }
+
+        dl dt {
+            @include color-font(22pt, $green, 800);
+        }
+
+        dl dd {
+            @include color-font(16pt, $dark_gray, 800);
+        }
+    }
+}

@@ -1,0 +1,96 @@
+//Monospace
+@font-face {
+    font-family: 'Monospace';
+    src:
+    url('fonts/Monospace.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monospace';
+    src:
+    url('fonts/MonospaceBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monospace';
+    src:
+    url('fonts/MonospaceOblique.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@mixin monospaceBold {
+    font-family: Monospace;
+    font-weight: 900;
+}
+
+@mixin monospaceRegular {
+    font-family: Monospace;
+    font-weight: 700;
+}
+
+@mixin monospaceLight {
+    font-family: Monospace;
+    font-weight: 500;
+}
+
+
+//NotoSansCJKkr
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    src:
+    url('../../fonts/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    src:
+    url('../../fonts/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    src:
+    url('../../fonts/SpoqaHanSansNeo-Light.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin SpoqaHanSansNeoBold {
+    font-family: SpoqaHanSansNeo;
+    font-weight: 900;
+}
+
+@mixin SpoqaHanSansNeoRegular {
+    font-family: SpoqaHanSansNeo;
+    font-weight: 700;
+}
+
+@mixin SpoqaHanSansNeoLight {
+    font-family: SpoqaHanSansNeo;
+    font-weight: 500;
+}
+
+
+
+//Decimal
+@font-face {
+    font-family: 'Decimal',Decimal;
+    src: url('../../fonts/Decimal-Semibold.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin DecimalRegular {
+   font-family: 'Decimal',Decimal;
+   font-weight: 700;
+}

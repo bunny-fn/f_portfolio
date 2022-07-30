@@ -1,4 +1,12 @@
 @charset "UTF-8";
 @import "color";
-@import 'common';
-@import 'intro/index';
+@import "mixin";
+@import "font";
+@import "common";
+
+
+@import "intro/index";
+@import "about/index";
+@import "skill/index";
+@import "project/index";
+@import "contact/index";

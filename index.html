@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>web publisher portfolio</title>
+    <title>BOBO - web publisher portfolio</title>
 
     <meta name="description" content="BOBO - 웹 퍼블리셔 포트폴리오">
     <meta name="keywords" content="웹 퍼블리셔, 경력 웹 퍼블리셔, 포트폴리오, 웹 퍼블리셔 포트폴리오">
@@ -20,47 +20,143 @@
     <!-- <meta name="twitter:image" content="https://nykim.net/images/ogImage.png"> -->
 
     <link href="dist/css/style.css" rel="stylesheet">
+    <script>
+        function includeHTML(){
+            
+            let z, elmnt, file, xhttp;
+        
+            z = document.getElementsByTagName("*");
+        
+            for (let i = 0; i < z.length; i++) {
+    
+                
+                elmnt = z[i];
+                file = elmnt.getAttribute("data-include");
+        
+                console.log(file);
+        
+    
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                    
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                            if(this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("data-include");
+    
+    
+        
+    
+                            includeHTML();
+                        }//if
+                    }//onreadystatechange
+        
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    return;
+                }//if - file
+            }//for
+        }//includeHTML
+    
+    
+        window.addEventListener('DOMContentLoaded',()=>{
+            includeHTML();
+        });
+    
+    </script>
+
+
 </head>
+
+
+
 <body>
-    <div class="wrap">
-        <header>
-            <div class="logo">
-                BOBO
+
+
+    
+
+    <div class='wrap'>
+
+        <div data-include="test.html">d</div>
+
+
+        <!-- <header id='header'>
+            <div class='header-container'>
+                <div class='header-sub-container'>
+                    <div class='logo'>
+                        <a href='#intro'>BOBO</a>
+                    </div>
+            
+                    <ul class='nav'>
+                        <li><a id='nav-about' href='#about'>ABOUT</a></li>
+                        <li><a id='nav-skill' href='#skill'>SKILL</a></li>
+                        <li><a id='nav-project' href='#project'>PROJECT</a></li>
+                        <li><a id='nav-contact' href='#contact'>CONTACT</a></li>
+                    </ul>
+                </div>
+            </div> 
+        </header> -->
+    
+        <section id='intro'>
+            <div class="contents-container">
+                <div class='intro-contents' >
+                    <div id='intro-txt1' class='intro-txt1' contenteditable data-heading='web'>web</div>
+                    
+                </div>
+                <div class='intro-contents' >
+            
+                    <div id='intro-txt2' class='intro-txt2' contenteditable data-heading='publisher'>publisher</div>
+                </div>
             </div>
-    
-            <ul class="nav">
-                <li>About</li>
-                <li>Skill</li>
-                <li>Project</li>
-                <li>Contact</li>
-            </ul>
-        </header>
-    
-        <section class="intro">
-            <div class="contents">
-df
+        </section>
+
+        <section id='about'>
+            <div class='contents-container'>
             </div>
         </section>
 
-        <section class="about">
-
-        </section>
-
-        <section class="skill">
+        <section id='skill'>
 
         </section>
     
-        <section class="project">
+        <section id='project'>
+            <div class='project-container'>
+
+            </div>
 
         </section>
 
-        <section class="contact">
-
+        <section id='contact'>
+            <div class='contact-container'>
+                <div class='contact-tit'>예쁘게 만들어 드리겠습니다&#128522;</div>
+                <dl>
+                    <dt>E-MAIL</dt>
+                    <dd>hymnnn28@gmail.com</dd>
+                </dl>
+    
+                <dl>
+                    <dt>H·P</dt>
+                    <dd>010-5271-2827</dd>
+                </dl>
+            </div>
         </section>
 
         <footer>
-            © 2022 
+            Copyright 2022 © All Rights Reserved
         </footer>
     </div>
+
+    <aside>
+        <div class='aside-container'>
+            <div></div>
+            <a id='top-move'>top</a>
+        </div>
+    </aside>
+
+    <script src='js/common.js'></script>
+        
+
 </body>
 </html>

@@ -1,1 +1,143 @@
- 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrap {
+    
+}
+
+header {
+    
+    .header-container { 
+        position: fixed;
+        top: 0;
+
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 1220px;
+        z-index:99;
+
+        .header-sub-container {
+            @include row;
+            justify-content: space-between;
+            margin:20px 50px;
+
+
+            .logo a {
+                padding: 2px 8px 8px 8px;
+                @include color-font(20pt, $pink, 700);
+                text-shadow: 0px 2px 0px $white;
+                background: url("../../images/leaf.jpg") no-repeat center center fixed;  
+                background-size: cover;
+                
+                @include round-border(25px, 1px, $white);
+            }
+            
+        
+            .nav {
+                @include row;
+                list-style: none;
+    
+                li a {
+                    padding: 0 15px;
+                    @include color-font(16pt, $pink, 700);
+                    text-shadow: 0px 1px 0px $white;
+                }
+            }
+        }    
+    }
+}
+
+.header-scroll-down {
+    color: red;
+}
+
+.header-scroll-up {
+    color: yellow;
+}
+
+
+aside {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+
+    .aside-container {
+        position: fixed;
+
+        #top-move {
+            background-color: #333;
+            font-size: 1em;  color:#fff;
+            /* 가운데정렬을위한 lineheight */
+            line-height: 50px;
+            text-align: center;
+            width:50px;
+            height:50px;
+            /* 원만들기 */
+            border-radius: 40px;
+            position: fixed;
+            bottom: 60px;
+            right:60px;
+            transition-property: background-color, opacity, visibility;
+            transition-duration: 0.3s, 0.5s, 0.5s;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+           }
+
+        #top-move:after {
+            line-height: 40px;
+        }
+          
+        #top-move.show {
+            opacity:1;
+            visibility:visible;
+        }
+        
+        #top-move.show:hover {
+            cursor:pointer;
+            background-color: blue;
+        }
+    }
+}
+
+footer {
+    @include center;
+    padding:8px;
+    @include color-font(10pt, $black, 700);
+}
+
+::-webkit-scrollbar {
+    width:15px;    /*-- 세로 스크롤바 굵기 --*/
+    height:15px;  /*-- 가로 스크롤바 높이 --*/
+
+}
+::-webkit-scrollbar-track-piece  {
+    background-color: #eee;   /*-- 스크롤 색상 --*/
+    border-radius:0;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 15px;     /*-- ?? --*/
+    background-color: #70AA92;    /*-- 스클로 배경 색상 --*/
+    border-radius:25px;
+}
+
