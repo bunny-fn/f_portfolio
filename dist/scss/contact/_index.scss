@@ -1,13 +1,22 @@
 #contact {
     width: 100%;
     height: auto;
+    @include MaruBuriRegular;
+
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+      ), url("../../images/intro/leaf_shadow.jpg") center center fixed;
+    background-size: 100vw 100vh;
+
+    margin: 0 auto;
+    background-size: cover;
+    background-position: 50%;
 
     .contact-container {
-        width:1220px;
         @include center;
         @include column;
         align-content: center;
-        padding:150px 50px;
         margin:0 auto;
 
         .contact-tit {
@@ -15,16 +24,68 @@
             padding-bottom:30px;
         }
 
-        dl {
-            padding: 25px 0;
-        }
+        
+        .contact-card-container {
+            @include center;
+            align-items: center;
 
-        dl dt {
-            @include color-font(22pt, $green, 800);
-        }
+    
+            .contact-card-box {
+                width:500px;
+                height:300px;
+                background: url("../../images/intro/paper4.jpg") no-repeat center center;
+                //background-color: rgba(45,71,35,0.6);
 
-        dl dd {
-            @include color-font(16pt, $dark_gray, 800);
+    
+                .card-desc {
+                    width:100%;
+                    height:100%;
+                    background-color: rgba(80,112,98,0.75);
+
+                    @include center;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+        
+                    -webkit-box-shadow: -2px 2px 2px 1px rgba(0,0,0,0.45); 
+                    box-shadow: -2px 2px 2px 1px rgba(0,0,0,0.45);
+                
+         
+                    .name {
+                        @include color-font(18pt, rgba(255,255,255,0.8), 500);
+                        padding-bottom:20px;
+                        text-align: center;
+                    }
+    
+                    .card-desc2 {
+                        margin:0 auto;
+                        
+                        dl {
+                            @include row;
+                            @include color-font(12.5pt, rgba(255,255,255,0.7), 500);
+                            text-align: left;
+        
+                            dt {
+                                width:70px;
+                                margin-right:15px;
+                                color:rgba(255,255,255,0.8);
+                                text-align: right;
+                            }
+                        }
+
+                        .e-mail, .tel {
+                            @include color-font(12.5pt, rgba(255,255,255,0.7), 500);
+                        }
+                    }
+                }
+            }
         }
     }
+}
+
+@media (max-width: 600px) {
+    #contact .contact-container .contact-card-container .contact-card-box {
+        width: 400px;
+        height: 250px;
+    }    
 }

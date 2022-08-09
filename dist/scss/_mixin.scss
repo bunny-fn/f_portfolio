@@ -19,7 +19,7 @@
     font-weight: $weight;
  }
 
- @mixin round-border($radius, $size, $color,) {
+ @mixin round-border($radius, $size, $color) {
     border-radius: $radius;
     border: $size solid $color;
 }

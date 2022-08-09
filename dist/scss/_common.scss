@@ -4,12 +4,13 @@
     padding: 0;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-
+    @include NanumSquareRegular;
 }
 
 a {
@@ -18,6 +19,26 @@ a {
 
 .wrap {
     
+}
+
+.dark-gray-btn {
+    background-color: $dark_gray3;
+    @include round-border(20px, 0, $dark_gray3);
+    @include color-font(9pt,$white,500);
+    padding:7px 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $dark_green;
+    }
+}
+
+.row {
+    @include row;
+}
+
+.col {
+    @include column;
 }
 
 header {
@@ -36,25 +57,20 @@ header {
         
         z-index:99;
 
-       
-
+    
         .header-sub-container {
-            max-width: 1220px;
+            max-width: 1600px;
             @include row;
             justify-content: space-between;
             align-items: center;
-            margin:20px auto;
+            margin:12px auto;
             padding: 0 50px;
 
 
             .logo a {
-                padding: 2px 8px 8px 8px;
-                @include color-font(20pt, $pink, 700);
-                text-shadow: 0px 2px 0px $white;
-                background: url("../../images/leaf.jpg") no-repeat center center fixed;  
-                background-size: cover;
-                
-                @include round-border(25px, 1px, $white);
+                @include color-font(20pt, $burgundy, 700);
+                //background: url("../../images/leaf.jpg") no-repeat center center fixed;  
+                //background-size: cover;
             }
             
         
@@ -63,18 +79,127 @@ header {
                 list-style: none;
     
                 li a {
-                    padding: 0 15px;
-                    @include color-font(16pt, $pink, 700);
-                    text-shadow: 0px 1px 0px $white;
+                    padding: 0 17px;
+                    @include color-font(16pt, $burgundy, 700);
                 }
+
+                // li:last-child a {
+                //     padding-left: 15px;
+                //     padding-right:0;
+                // }
             }
         }    
+    }    
+}
+
+
+.nav-toggle {
+    padding: 5px;
+    background-color: transparent;
+    border:0;
+    cursor: pointer;
+    height: 29px;
+    display: none;
+}
+
+.nav-toggle span, 
+.nav-toggle span:before, 
+.nav-toggle span:after {
+    width: 28px;
+    height: 2px;
+    background-color: $burgundy;
+    display: block;
+    transition: .3s;
+}
+
+.nav-toggle span:before {
+    content: '';
+    transform: translateY(-9px);
+}
+
+.nav-toggle span:after {
+    content: '';
+    transform: translateY(6px);
+}
+
+.nav-toggle.toggle-open span {
+    background-color: transparent;
+}
+
+.nav-toggle.toggle-open span:before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.nav-toggle.toggle-open span:after {
+    transform: translateY(-2px) rotate(-45deg);
+}
+
+
+@media screen and (max-width: 1290px) {
+    header #header-container .header-sub-container {
+        padding:0 20px;
+    }
+
+    header #header-container .header-sub-container .nav {
+        @include column;
+        justify-content: center;
+
+        li {
+            margin:30px 0;
+        }
+        li a {
+            @include color-font(24pt,$white,700);
+
+            &:hover {
+                @include color-font(24pt,$burgundy,900);
+            }
+        }
+    }
+
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .navbar {
+        margin:12px auto;
+        //height: 29px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 53px);
+        left: 0;
+        top: 53px;
+        @include column;
+        align-items: center;
+        background-color: rgba(0,0,0,.8);
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+
+        li {
+            width: 100%;
+            text-align: center;
+            
+            a {
+                padding: 25px;
+            }
+        }
+    }
+
+    .navbar ul.open {
+        max-height: 100vh;
+        overflow: visible;
     }
 }
 
+
+
 .header-scroll-down {
-    //background-color: $white;
     background-color: $white;
+    background-color:rgba(255,255,255,0.3);
     animation-name: header-scroll-down-ani;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -100,6 +225,24 @@ header {
     to {background-color: rgba(255,255,255,0.3);}
 }
 
+.contents-container {
+    max-width:1300px;
+    margin:0 auto;
+    padding: 100px 20px;
+
+    .contents-title {
+        text-align: center;
+        @include color-font(32pt, $burgundy, 900);
+        padding-bottom:50px;
+    }
+
+    .contents-sub-title {
+        text-align: left;
+        @include color-font(26pt, $burgundy, 900);
+        padding:50px 0 10px;
+    }
+}
+
 
 aside {
     position: absolute;
@@ -113,24 +256,23 @@ aside {
         position: fixed;
 
         #top-move {
-            background-color: #333;
-            font-size: 1em;  color:#fff;
-            /* 가운데정렬을위한 lineheight */
+            background-color: $burgundy;
+            
             line-height: 50px;
             text-align: center;
             width:50px;
             height:50px;
-            /* 원만들기 */
+            
             border-radius: 40px;
             position: fixed;
             bottom: 60px;
-            right:60px;
+            right:20px;
             transition-property: background-color, opacity, visibility;
             transition-duration: 0.3s, 0.5s, 0.5s;
             opacity: 0;
             visibility: hidden;
             z-index: 999;
-           }
+        }
 
         #top-move:after {
             line-height: 40px;
@@ -143,30 +285,46 @@ aside {
         
         #top-move.show:hover {
             cursor:pointer;
-            background-color: blue;
+            background-color:$dark_green;
         }
     }
 }
 
+.fa-caret-up {
+    position: absolute;
+    top: 10px;
+    left: 40%;
+    @include color-font(13pt, $white, 500);
+}
+
+.top-move-txt {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 28%;
+    @include color-font(10pt, $white, 500);
+}
+
 footer {
     @include center;
-    padding:8px;
-    @include color-font(10pt, $black, 700);
+    padding:10px;
+    @include color-font(8pt, $black, 500);
+    background-color: $light_gray2;
 }
 
 ::-webkit-scrollbar {
-    width:15px;    /*-- 세로 스크롤바 굵기 --*/
-    height:15px;  /*-- 가로 스크롤바 높이 --*/
+    width:12px;    /*-- 세로 스크롤바 굵기 --*/
+    height:12px;  /*-- 가로 스크롤바 높이 --*/
 
 }
 ::-webkit-scrollbar-track-piece  {
-    background-color: #eee;   /*-- 스크롤 색상 --*/
+    background-color: $light_gray;   /*-- 스크롤 색상 --*/
     border-radius:0;
 }
 
 ::-webkit-scrollbar-thumb {
-    width: 15px;     /*-- ?? --*/
-    background-color: #70AA92;    /*-- 스클로 배경 색상 --*/
+    width: 12px;     /*-- ?? --*/
+    background-color: lighten($dark_green, 5%);    /*-- 스클로 배경 색상 --*/
     border-radius:25px;
 }
 

@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
     <title>BOBO - web publisher portfolio</title>
 
     <meta name="description" content="BOBO - 웹 퍼블리셔 포트폴리오">
@@ -20,6 +24,19 @@
     <!-- <meta name="twitter:image" content="https://nykim.net/images/ogImage.png"> -->
 
     <link href="dist/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script> -->
+
+
+    <link rel="stylesheet" href="js/lightbox2-2.11.3/src/css/lightbox.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+
+
     <script>
         function includeHTML(){
             
@@ -48,15 +65,15 @@
         
     
                             includeHTML();
-                        }//if
-                    }//onreadystatechange
+                        }
+                    }
         
                     xhttp.open("GET", file, true);
                     xhttp.send();
                     return;
-                }//if - file
-            }//for
-        }//includeHTML
+                }
+            }
+        }
     
     
         window.addEventListener('DOMContentLoaded',()=>{
@@ -64,72 +81,129 @@
         });
     
     </script>
-
-
 </head>
 
 <body>
-
     <div class='wrap'>
 
         <header id='header'>
             <div id='header-container' class='header-container'>
-                <div class='header-sub-container'>
+                <div class='header-sub-container navbar'>
                     <div class='logo'>
                         <a href='#intro'>BOBO</a>
                     </div>
             
                     <ul class='nav'>
                         <li><a id='nav-about' href='#about'>ABOUT</a></li>
-                        <li><a id='nav-skill' href='#skill'>SKILL</a></li>
                         <li><a id='nav-project' href='#project'>PROJECT</a></li>
                         <li><a id='nav-contact' href='#contact'>CONTACT</a></li>
                     </ul>
+
+                    <button class='nav-toggle'>
+                        <span></span>
+                    </button>
                 </div>
             </div> 
         </header>
     
+    
         <section id='intro'>
-            <div class="contents-container">
-                <div class='intro-contents' >
+            <div class=''>
+                <!-- <div class='intro-contents'>
+                    <div id='intro-txt1' class='intro-txt1' contenteditable data-heading='welcome'>welcome</div>
+                </div> -->
+
+                <!-- <div class='intro-contents' >
                     <div id='intro-txt1' class='intro-txt1' contenteditable data-heading='web'>web</div>
                     
                 </div>
                 <div class='intro-contents' >
             
                     <div id='intro-txt2' class='intro-txt2' contenteditable data-heading='publisher'>publisher</div>
+                </div> -->
+
+                <div class='card-container'>
+                    <div class='card-box front-card-box'>
+                        <div class='front-desc'>
+                            <p>Web Publisher</p>
+                            <hr />
+                            <p>Front-End Developer</p>
+                        </div>
+                    </div>
+    
+                    <div class='card-box back-card-box'>
+                        <div class='back-desc'>
+                            <p class='name'>Han Bowon</p>
+
+                            <div class='card-contact-box'>
+                                <dl class='contact'>
+                                    <dt>E-mail</dt>
+                                    <dd><a href='mailto:hymnnn28@gmail.com' class='e-mail'>hymnnn28@gmail.com</a></dd>
+                                </dl>
+                                <dl class='contact'>
+                                    <dt>HP</dt>
+                                    <dd><a href='tel:010-5271-2827' class='tel'>010-5271-2827</a></dd>
+                                </dl>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </section>
 
         <section id='about'>
-            <div class='contents-container'>
+            <div class='about-container contents-container'>
+                <div class='contents-title'>ABOUT</div>
+                <ul class='about-desc'>
+                    <li><i class="fa-solid fa-square"></i>웹 접근성의 중요성을 알고 있으며, 시멘틱 마크업을 준수합니다.</li>
+                    <li><i class="fa-solid fa-square"></i>디자인 시안과 동일한 결과물을 냅니다.</li>
+                    <li><i class="fa-solid fa-square"></i>UX에 대해 관심을 가지며, 사용자에게 친절한 사이트를 만들고자 합니다.</li>
+                    <li><i class="fa-solid fa-square"></i>프로젝트에 있어서 협업은 필수며, 원활한 커뮤니케이션을 통해 만족스러운 결과를 도출합니다.</li>
+                </ul>
+
+                <div>
+                    <div class='contents-sub-title'>Time Line</div>
+                    <div data-include='views/contents/about.html'></div>
+                </div>
+                
             </div>
         </section>
 
-        <section id='skill'>
-
-        </section>
     
         <section id='project'>
-            <div class='project-container'>
+            <div class='project-container contents-container'>
+                <div class='contents-title'>PROJECT</div>
                 <div data-include='views/contents/project.html'></div>
             </div>
 
         </section>
 
         <section id='contact'>
-            <div class='contact-container'>
-                <div class='contact-tit'>예쁘게 만들어 드리겠습니다&#128522;</div>
-                <dl>
-                    <dt>E-MAIL</dt>
-                    <dd>hymnnn28@gmail.com</dd>
-                </dl>
+            <div class='contact-container contents-container'>
+                <div class='contents-title'>CONTACT</div>
+
+                <div class='contact-card-container'>
+                    <div class='contact-card-box'>
+                        <div class='card-desc'>
+                            <p class='name'>Han Bowon</p>
     
-                <dl>
-                    <dt>H·P</dt>
-                    <dd>010-5271-2827</dd>
-                </dl>
+                            <div class='card-desc2'>
+                                <dl class='contact'>
+                                    <dt>E-mail</dt>
+                                    <dd><a href='mailto:hymnnn28@gmail.com' class='e-mail'>hymnnn28@gmail.com</a></dd>
+                                </dl>
+                                <dl class='contact'>
+                                    <dt>HP</dt>
+                                    <dd><a href='tel:010-5271-2827' class='tel'>010-5271-2827</a></dd>
+                                </dl>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
@@ -140,20 +214,19 @@
 
     <aside>
         <div class='aside-container'>
-            <div></div>
-            <a id='top-move'>top</a>
+            <a id='top-move'>
+                <i class='fa-solid fa-caret-up'></i>
+                <span class='top-move-txt'>TOP</span>
+            </a>
         </div>
     </aside>
 
 
-
-
-    <div data-include='test.html'></div>
     
 
-
+    <div data-include='views/components/project_modal.html'></div>
+    <div data-include='views/components/project_full_slide.html'></div>
     <script src='js/common.js'></script>
-        
 
 </body>
 </html>
