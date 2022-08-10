@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        /**
+         * Internet Explorer check
+         */
+  
+        let agent = navigator.userAgent.toLowerCase();
+
+        if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+            alert('Internet Explorer는 호환되지 않는 브라우저 입니다.');
+            window.open('about:blank','_parent').parent.close();
+        } 
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
     <title>BOBO - web publisher portfolio</title>
 
     <meta name="description" content="BOBO - 웹 퍼블리셔 포트폴리오">
@@ -38,6 +47,7 @@
 
 
     <script>
+
         function includeHTML(){
             
             let z, elmnt, file, xhttp;
