@@ -54,7 +54,7 @@
             .title {
               @include round-border(2px, 0, $bg_green);
               background-color: rgba(76,100,90,0.7);
-              @include color-font(10pt, $white, 900);
+              @include color-font(12.5pt, $white, 900);
               width:110px;
               padding:3px;
               text-align: center;
@@ -62,7 +62,7 @@
             }
 
             .contents {
-              @include color-font(11pt, $black3, 600);
+              @include color-font(12.5pt, $black3, 600);
               line-height: 20px;
               padding:0 2px;
 
@@ -76,12 +76,12 @@
 
               a {
                 text-decoration: none;
-                @include color-font(11pt, $black3, 600);
+                @include color-font(12.5pt, $black3, 600);
                 cursor: pointer;
 
                 &:hover {
                   text-decoration: underline;
-                  @include color-font(11pt, $black3, 600);
+                  @include color-font(12.5pt, $black3, 600);
                 }
               }
             }
@@ -102,8 +102,8 @@
 
     .modal-close {
       position: absolute;
-      top:20px;
-      right:20px;
+      top:5px;
+      right:10px;
       @include color-font(24pt, $dark_gray, 500);
       background-color: $white;
       border:0;

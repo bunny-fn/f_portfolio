@@ -388,7 +388,7 @@ footer {
   display: flex;
   justify-content: center;
   padding: 10px;
-  font-size: 8pt;
+  font-size: 10.5pt;
   color: #1C1C1C;
   font-weight: 500;
   background-color: #F9F9F9;
@@ -654,7 +654,7 @@ footer {
   border: 7px solid rgba(76, 100, 90, 0.5);
 }
 #about .about-container .about-desc li {
-  font-size: 12pt;
+  font-size: 12.5pt;
   color: #4C645A;
   font-weight: 600;
   padding: 6px 0;
@@ -1221,7 +1221,7 @@ footer {
   border-radius: 2px;
   border: 0 solid #D5E3DA;
   background-color: rgba(76, 100, 90, 0.7);
-  font-size: 10pt;
+  font-size: 12.5pt;
   color: #fff;
   font-weight: 900;
   width: 110px;
@@ -1230,7 +1230,7 @@ footer {
   margin-bottom: 5px;
 }
 .modal .modal_content .project-desc-container .project-desc-sub-container .project-contents .contents {
-  font-size: 11pt;
+  font-size: 12.5pt;
   color: #373737;
   font-weight: 600;
   line-height: 20px;
@@ -1244,14 +1244,14 @@ footer {
 }
 .modal .modal_content .project-desc-container .project-desc-sub-container .project-contents .contents a {
   text-decoration: none;
-  font-size: 11pt;
+  font-size: 12.5pt;
   color: #373737;
   font-weight: 600;
   cursor: pointer;
 }
 .modal .modal_content .project-desc-container .project-desc-sub-container .project-contents .contents a:hover {
   text-decoration: underline;
-  font-size: 11pt;
+  font-size: 12.5pt;
   color: #373737;
   font-weight: 600;
 }
@@ -1266,8 +1266,8 @@ footer {
 }
 .modal .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 5px;
+  right: 10px;
   font-size: 24pt;
   color: #595959;
   font-weight: 500;

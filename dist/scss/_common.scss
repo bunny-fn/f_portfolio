@@ -308,7 +308,7 @@ aside {
 footer {
     @include center;
     padding:10px;
-    @include color-font(8pt, $black, 500);
+    @include color-font(10.5pt, $black, 500);
     background-color: $light_gray2;
 }
 

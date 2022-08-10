@@ -27,7 +27,7 @@
             @include round-border(2px, 7px, rgba(76,100,90,0.5));
 
             li {
-                @include color-font(12pt, $dark_green, 600);
+                @include color-font(12.5pt, $dark_green, 600);
                 padding:6px 0;
 
                 @include row;
