@@ -28,7 +28,7 @@
       .project-title {
         width:100%;
         text-align: center;
-        @include color-font(20pt, $dark_green, 900);
+        @include color-font(18pt, $dark_green, 900);
       }
 
       .project-desc-container {
@@ -42,7 +42,7 @@
 
           height:auto;
           max-height:680px;
-          overflow-y: auto;
+          overflow-y: scroll;
 
           .project-contents {
             margin-bottom:15px;

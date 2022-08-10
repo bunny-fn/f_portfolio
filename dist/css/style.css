@@ -1197,7 +1197,7 @@ footer {
 .modal .modal_content .project-title {
   width: 100%;
   text-align: center;
-  font-size: 20pt;
+  font-size: 18pt;
   color: #4C645A;
   font-weight: 900;
 }
@@ -1209,7 +1209,7 @@ footer {
   margin: 20px 0;
   height: auto;
   max-height: 680px;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 .modal .modal_content .project-desc-container .project-desc-sub-container .project-contents {
   margin-bottom: 15px;
