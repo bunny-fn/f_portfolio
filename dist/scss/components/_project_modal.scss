@@ -26,9 +26,10 @@
       @include round-border(2px, 0, $white);
 
       .project-title {
-        width:100%;
+        width:75%;
+        margin:0 auto;
         text-align: center;
-        @include color-font(18pt, $dark_green, 900);
+        @include color-font(17pt, $dark_green, 900);
       }
 
       .project-desc-container {

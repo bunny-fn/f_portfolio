@@ -630,7 +630,7 @@ footer {
 }
 @media (max-width: 600px) {
   #intro .card-container {
-    padding: 0 20px;
+    padding: 50px 20px 0;
   }
   #intro .card-container .card-box {
     width: 100%;
@@ -810,7 +810,7 @@ footer {
   clear: both;
 }
 #about .about-container .about-timeline-content h2 {
-  font-size: 9pt;
+  font-size: 12pt;
   color: #fff;
   font-weight: 900;
   margin-top: 0;
@@ -1195,9 +1195,10 @@ footer {
   border: 0 solid #fff;
 }
 .modal .modal_content .project-title {
-  width: 100%;
+  width: 75%;
+  margin: 0 auto;
   text-align: center;
-  font-size: 18pt;
+  font-size: 17pt;
   color: #4C645A;
   font-weight: 900;
 }
