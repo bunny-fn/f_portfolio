@@ -174,7 +174,7 @@ header {
         top: 53px;
         @include column;
         align-items: center;
-        background-color: rgba(0,0,0,.8);
+        background-color: rgba(0,0,0,.9);
         max-height: 0;
         overflow: hidden;
         transition: .3s;
@@ -182,7 +182,7 @@ header {
         li {
             width: 100%;
             text-align: center;
-            
+
             a {
                 padding: 25px;
             }

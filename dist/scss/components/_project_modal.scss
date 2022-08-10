@@ -26,6 +26,7 @@
       @include round-border(2px, 0, $white);
 
       .project-title {
+        width:100%;
         text-align: center;
         @include color-font(20pt, $dark_green, 900);
       }
@@ -122,5 +123,18 @@
   .modal .modal_content {
     width:480px;
     padding:30px;
+  }
+}
+
+
+
+@media only screen and (max-width: 640px) {
+  .modal .modal_content {
+    max-height: 600px;
+    margin:0 20px;
+  }
+
+  .modal .modal_content .project-desc-container .project-desc-sub-container {
+    max-height: 280px;
   }
 }
